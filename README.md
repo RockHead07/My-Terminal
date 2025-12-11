@@ -125,8 +125,9 @@ The script will:
 
 > [!NOTE]
 > For extra scalable configuration, you can also check the creator of Fastfetch GitHub https://github.com/fastfetch-cli/fastfetch?tab=readme-ov-file 
-> And for simple reminder, This repository contains my **personal terminal configuration**. It allows me to quickly restore my setup whenever I switch or reinstall Windows.  
-> For scalable configuration, check the official Fastfetch GitHub for additional options and modules.  
+
+And for simple reminder, This repository contains my **personal terminal configuration**. It allows me to quickly restore my setup whenever I switch or reinstall Windows.  
+For scalable configuration, check the official Fastfetch GitHub for additional options and modules.  
 
 # 
 
