@@ -5,9 +5,24 @@ chcp 65001 | Out-Null
 
 # --- Fastfetch ---
 Clear-Host
-fastfetch -c "$HOME/.config/fastfetch/config.jsonc"
+try {
+	if (Get-Command fastfetch -ErrorAction SilentlyContinue) {
+		$fastfetchConfig = "$HOME/.config/fastfetch/config.jsonc"
+		if (Test-Path $fastfetchConfig) {
+			fastfetch -c $fastfetchConfig
+		} else {
+			Write-Warning "Fastfetch config tidak ditemukan di: $fastfetchConfig"
+		}
+	} else {
+		Write-Warning "Fastfetch tidak terinstall. Install dengan: winget install fastfetch"
+	}
+}
+catch {
+	Write-Error "Error menjalankan fastfetch: $_"
+}
 
-$esc = "$([char]27)["
+# --- ASCII Art Banner ---
+$esc = "`e["
 
 Write-Host "$esc" + "37m██████ ▄▄ ▄▄ ▄▄  ▄▄▄▄   ██  ▄▄▄▄   ██████ ▄▄▄▄▄ ▄▄▄▄  ▄▄   ▄▄ ▄▄ ▄▄  ▄▄  ▄▄▄  ▄▄"
 Write-Host "$esc" + "36m  ██   ██▄██ ██ ███▄▄   ██ ███▄▄     ██   ██▄▄  ██▄█▄ ██▀▄▀██ ██ ███▄██ ██▀██ ██"

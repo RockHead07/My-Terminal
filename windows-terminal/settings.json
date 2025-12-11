@@ -9,19 +9,19 @@
     "keybindings": 
     [
         {
-            "id": null,
+            "command": "copy",
             "keys": "ctrl+c"
         },
         {
-            "id": null,
+            "command": "paste",
             "keys": "ctrl+v"
         },
         {
-            "id": null,
+            "command": "find",
             "keys": "ctrl+shift+f"
         },
         {
-            "id": null,
+            "command": "splitPane",
             "keys": "alt+shift+d"
         }
     ],
@@ -56,7 +56,7 @@
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "font": 
                 {
-                    "face": "JetBrains Mono"
+                    "face": "JetBrainsMono Nerd Font Mono"
                 },
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
